@@ -1,0 +1,39 @@
+@use "abstracts/mixins" as m;
+
+.popup {
+  @include m.transition(opacity visibility);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup-block {
+  max-width: 320px;
+  width: 100%;
+  padding: 15px;
+  background: var(--color-white);
+  border-radius: 15px;
+  position: relative;
+}
+
+.close-popup {
+  @include m.transition(color);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  color: var(--color-black);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include m.hover {
+    color: var(--color-red);
+  }
+}
