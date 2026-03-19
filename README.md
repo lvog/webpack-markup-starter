@@ -71,3 +71,6 @@ This will start the project in development mode.
 npm run build
 ```
 All files will be generated in the **dist** folder.
+
+## License 📄
+Distributed under the MIT License. See  `LICENSE`  for more information.
