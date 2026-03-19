@@ -1,9 +1,10 @@
 class Popup {
-  constructor(selector) {
+  constructor(selector, options = {}) {
     this.holder = document.querySelector(selector);
-    this.openBtn = null;
-    this.popupClass = ".popup-block";
-    this.closeBtnClass = ".close-popup";
+
+    this.openBtnClass = options.openBtn || ".open-popup";
+    this.popupClass = options.popup || ".popup-block";
+    this.closeBtnClass = options.closeBtn || ".close-popup";
   }
 
   init() {
@@ -13,21 +14,21 @@ class Popup {
   }
 
   findElements() {
-    this.openBtn = document.querySelector(".open-popup");
+    this.openBtn = document.querySelector(this.openBtnClass);
   }
 
   handleEvents() {
-    this.openBtn.addEventListener("click", (e) => {
-      e.preventDefault();
+    if (this.openBtn) {
+      this.openBtn.addEventListener("click", (e) => {
+        e.preventDefault();
 
-      this.openPopup();
-    });
+        this.openPopup();
+      });
+    }
 
     this.holder.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      const isCloseBtn = e.target.closest(".close-popup");
-      const isPopup = e.target.closest(".popup-block");
+      const isCloseBtn = e.target.closest(this.closeBtnClass);
+      const isPopup = e.target.closest(this.popupClass);
 
       if (isCloseBtn || !isPopup) {
         this.closePopup();

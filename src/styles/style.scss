@@ -1,15 +1,16 @@
-// 1. Configuration and helpers
+// 1. Variables, mixins and helpers
 @use "abstracts/variables";
 
-// 2. Vendors: include media mixins and mormalize
+// 2. Vendors
 @use "vendors/normalize";
 @use "vendors/icomoon";
 
 // 3. Base styles
 @use "base/fonts";
 @use "base/base";
+@use "base/form";
 
-// 4. Layout-related sections
+// 4. Layout sections
 @use "layout/header";
 @use "layout/common";
 @use "layout/footer";

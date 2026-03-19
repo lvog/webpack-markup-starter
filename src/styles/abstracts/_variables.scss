@@ -6,6 +6,7 @@ $breakpoint-widescreen: 1200px;
 :root {
   --color-black: #000;
   --color-white: #fff;
+  --color-gray: #727272;
   --color-orange: #ff8904;
   --color-dark-orange: #e05504;
   --color-red: #d60606;
@@ -44,6 +45,13 @@ $breakpoint-widescreen: 1200px;
 
   --btn-hover-background: var(--color-dark-orange);
   --btn-hover-border-color: var(--color-dark-orange);
+
+  --input-height: 46px;
+  --input-color: var(--color-black);
+  --input-placeholder-color: var(--color-gray);
+  --input-padding: 10px 15px;
+  --input-border-color: var(--color-black);
+  --input-hover-border-color: var(--color-orange);
 
   --base-transition-duration: 0.3s;
   --base-transition-timing-function: ease-in-out;
