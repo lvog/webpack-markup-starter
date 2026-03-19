@@ -28,6 +28,26 @@ Webpack Markup Starter is a development setup for building websites with **HTML*
 - **eslint-webpack-plugin** (runs ESLint during build)
 - **eslint-config-prettier** (disables conflicting ESLint rules)
 
+## Project Structure 📁
+
+```
+src/
+├── fonts/          # Web fonts
+├── images/         # Images and icons
+├── js/
+│   ├── modules/    # JavaScript modules
+│   └── app.js      # Main JavaScript entry point
+├── pages/
+│   └── index.html  # HTML templates
+└── styles/
+    ├── abstracts/  # Variables, mixins, functions
+    ├── base/       # Basic styles
+    ├── components/ # UI components
+    ├── layout/     # Layout sections
+    ├── vendors/    # Third-party styles
+    └── style.scss  # Main stylesheet entry point
+```
+
 ## Getting Started 🚀
 
 ### 1. Clone the repository
